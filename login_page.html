@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protected Sermon Page</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: linear-gradient(to bottom right, #6a82fb, #fc5c7d);
+        }
+        .container {
+            background-color: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            width: 90%;
+            max-width: 400px;
+        }
+        h2 {
+            margin-bottom: 20px;
+            color: #333;
+            font-size: 24px;
+        }
+        .profile-picture {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+            border: 3px solid #6a82fb;
+        }
+        .password-input {
+            margin: 20px 0;
+        }
+        input[type="password"] {
+            padding: 15px;
+            font-size: 1em;
+            width: 100%;
+            border: 2px solid #6a82fb;
+            border-radius: 5px;
+            transition: border-color 0.3s;
+        }
+        input[type="password"]:focus {
+            border-color: #fc5c7d;
+            outline: none;
+        }
+        button {
+            padding: 12px 20px;
+            font-size: 1em;
+            background-color: #6a82fb;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            width: 100%;
+        }
+        button:hover {
+            background-color: #fc5c7d;
+        }
+        .error-message {
+            color: red;
+            margin-top: 10px;
+        }
+        #sermon-content {
+            margin-top: 20px;
+            display: none; /* Initially hidden */
+            background-color: #f9f9f9;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <img src="path/to/pastor-image.jpg" alt="Pastor Isaiah Dete Arina" class="profile-picture">
+    <h2>Welcome, Pastor Isaiah Dete Arina</h2>
+    <h3>Enter Password to Access Sermons</h3>
+    <div class="password-input">
+        <input type="password" id="password" placeholder="Enter password">
+        <button onclick="checkPassword()">Submit</button>
+        <p class="error-message" id="error-message"></p>
+    </div>
+
+    <!-- Hidden Sermon Content -->
+    <div id="sermon-content">
+        <h3>Recent Sermon: The Power of Faith</h3>
+        <p>In this sermon, we discuss how faith can move mountains and change lives.</p>
+        <p>Date: September 28, 2024</p>
+    </div>
+</div>
+
+<script>
+    // Hardcoded password (you can change this)
+    const correctPassword = "Dete@254kenya";
+
+    function checkPassword() {
+        const enteredPassword = document.getElementById('password').value;
+        const errorMessage = document.getElementById('error-message');
+        const sermonContent = document.getElementById('sermon-content');
+
+        // Check if the entered password matches the hardcoded password
+        if (enteredPassword === correctPassword) {
+            errorMessage.textContent = ''; // Clear any error message
+            sermonContent.style.display = 'block'; // Show sermon content
+            // Redirect to the admin dashboard after a short delay
+            setTimeout(() => {
+                window.location.href = './dashboard.html'; // Change to your actual admin dashboard path
+            }, 1000); // Redirect after 1 second
+        } else {
+            errorMessage.textContent = 'Incorrect password. Please try again.';
+            sermonContent.style.display = 'none'; // Hide sermon content
+        }
+    }
+</script>
+
+</body>
+</html>

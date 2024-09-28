@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Isaiah Dete Arina | Seventh-day Adventist Pastor</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #F4F1DE;
+            color: #333;
+        }
+
+        header {
+            background-color: #1F3C88;
+            color: white;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            font-size: 1.8em;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+        }
+
+        header h1 i {
+            margin-left: 10px; /* Add some space between the title and the icon */
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px 15px;
+            transition: background-color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            background-color: #F4A261;
+            border-radius: 5px;
+        }
+
+        .download-cv {
+            background-color: #F4A261;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: bold;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .download-cv:hover {
+            background-color: #E76F51;
+        }
+
+        .hero-section {
+            text-align: center;
+            padding: 60px 20px;
+            background-color: #F4F1DE;
+            color: #1F3C88;
+        }
+
+        .hero-section h1 {
+            font-size: 3em;
+        }
+
+        .hero-section p {
+            font-size: 1.4em;
+            margin: 10px 0;
+        }
+
+        .section-intro {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 50px 20px;
+            background-color: #fff;
+            text-align: center;
+        }
+
+        .profile-pic img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            border: 4px solid #1F3C88;
+        }
+
+        .intro-text {
+            margin-top: 20px;
+            max-width: 700px;
+            color: #333;
+        }
+
+        .intro-text h2 {
+            font-size: 2.4em;
+            margin-bottom: 10px;
+            color: #1F3C88;
+        }
+
+        .quick-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            padding: 40px 0;
+            background-color: #F4F1DE;
+        }
+
+        .link-card {
+            background-color: #1F3C88;
+            color: white;
+            padding: 20px 30px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .link-card a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .skills-overview, .pastoral-section {
+            padding: 50px 20px;
+            text-align: center;
+            background-color: #fff;
+            margin-bottom: 30px;
+        }
+
+        .skills-overview h2, .pastoral-section h2 {
+            margin-bottom: 30px;
+            font-size: 2.2em;
+            color: #1F3C88;
+        }
+
+        footer {
+            background-color: #1F3C88;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer a {
+            color: #F4A261;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .footer-quote {
+            margin-top: 10px;
+            font-style: italic;
+        }
+
+        /* Media Queries for Responsive Design */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            header h1 {
+                font-size: 1.5em;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .hero-section h1 {
+                font-size: 2.2em;
+            }
+
+            .hero-section p {
+                font-size: 1.2em;
+            }
+
+            .quick-links {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .link-card {
+                width: 80%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-section {
+                padding: 40px 10px;
+            }
+
+            .hero-section h1 {
+                font-size: 1.8em;
+            }
+
+            .hero-section p {
+                font-size: 1em;
+            }
+
+            .quick-links {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .link-card {
+                padding: 15px;
+            }
+
+            .intro-text h2 {
+                font-size: 1.8em;
+            }
+
+            nav ul li a {
+                font-size: 0.9em;
+                padding: 8px 10px;
+            }
+        }
+    </style>
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1>
+            Isaiah Dete Arina 
+            <a href="./login_page.html">
+                <i class="fas fa-sign-in-alt" style="font-size: 24px; color: white;"></i>
+            </a>
+        </h1>
+        
+        <nav>
+            <ul>
+                <li><a href="./about_me.html">About Me</a></li>
+                <li><a href="./experience.html">Experience</a></li>
+                <li><a href="./sermons.html">Sermons</a></li>
+                <li><a href="./skills.html">Skills</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <a href="./date.pdf" class="download-cv" download>Download CV</a>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <h1>Seventh-day Adventist Pastor</h1>
+            <p>Guiding others through faith, scripture, and leadership</p>
+        </section>
+
+        <section id="about" class="section-intro">
+            <div class="profile-pic">
+                <img src="./images/SDA logo.webp" alt="Isaiah's Profile Picture">
+            </div>
+            <div class="intro-text">
+                <h2>Welcome, I’m Isaiah</h2>
+                <p>I am a Seventh-day Adventist pastor with a passion for leadership and spiritual growth. My mission is to inspire others to live according to God’s will and serve communities through faith and guidance.</p>
+            </div>
+        </section>
+
+        <section class="quick-links">
+            <div class="link-card">
+                <a href="./sermons.html">Recent Sermons</a>
+            </div>
+            <div class="link-card">
+                <a href="./contact.html">Contact Me</a>
+            </div>
+        </section>
+
+        <section id="skills" class="skills-overview">
+            <h2>Pastoral Skills</h2>
+            <p>Leadership, Biblical Knowledge, Counseling, Community Outreach, Public Speaking</p>
+        </section>
+
+        <section class="pastoral-section">
+            <h2>Faith & Leadership</h2>
+            <p>I have dedicated my life to teaching and empowering others through God’s word.</p>
+        </section>
+
+        <!-- Add this new section before the closing </main> tag -->
+        <section class="full-body-pic" style="text-align: center; padding: 40px 20px;">
+            <h2> Pastor Isaiah</h2>
+            <img src="./images/dete pic.jpeg" alt="Isaiah Dete Arina Full Body" style="width: 100%; max-width: 400px; border-radius: 10px; border: 4px solid #1F3C88;">
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Isaiah Dete Arina | <a href="./privacy_policy.html">Privacy Policy</a></p>
+        <p>Website by :<a href="https://my-cv-three-rust.vercel.app/" target="_blank">Meshack Odondi</a></p> <!-- Update with your name and website -->
+        <p class="footer-quote">"Faith is taking the first step even when you don’t see the whole staircase." - Martin Luther King Jr.</p>
+        
+    </footer>
+</body>
+</html>
